@@ -1,0 +1,11 @@
+<%- | String[1] $cron,
+      String[1] $createrepo_update_command,
+      String[1] $repo_path
+| -%>
+# THIS FILE IS PUPPET MANAGED. DO NOT EDIT.
+SHELL=/bin/bash
+PATH=/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=root
+
+# Update package manifest for <%= $repo_path %>
+<%= $cron %> root <%= $createrepo_update_command %> <%= $repo_path %>

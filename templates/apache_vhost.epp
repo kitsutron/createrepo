@@ -1,0 +1,11 @@
+<%- | String[1] $server_name,
+      String[1] $server_alias,
+      String[1] $repo_path
+| -%>
+# THIS FILE IS PUPPET MANAGED. DO NOT EDIT.
+<VirtualHost *:80>
+  ServerName <%= $server_name %>
+  ServerAlias <%= $server_alias %>
+
+  DocumentRoot <%= $repo_path %>
+</VirtualHost>
