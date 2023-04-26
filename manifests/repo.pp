@@ -48,7 +48,9 @@ define createrepo::repo (
     content => epp('createrepo/repo_cron.epp', {
         cron                      => $refresh_period,
         createrepo_update_command => $createrepo::params::createrepo_update,
-        repo_path                 => "${createrepo::params::repo_base}/${name}"
+        repo_group                => $createrepo::params::repo_group,
+        repo_owner                => $createrepo::params::repo_owner,
+        repo_path                 => "${createrepo::params::repo_base}/${name}",
     }),
   }
 
