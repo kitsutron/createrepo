@@ -10,4 +10,4 @@ PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
 
 # Update package manifest for <%= $repo_path %>
-<%= $cron %> root <%= $createrepo_update_command %> <%= $repo_path %>; chown -R <%= repo_owner %>:<%= repo_group %> <%= $repo_path %>
+<%= $cron %> root <%= $createrepo_update_command %> <%= $repo_path %>; chown -R <%= $repo_owner %>:<%= $repo_group %> <%= $repo_path %>
